@@ -1,5 +1,6 @@
-Truongnha
+Xây dựng test cho truongnha.com
 =========
+UNIVERSITY OF ENGINEERING AND TECHNOLOGY
 
 Bài tập lớn môn: Kiểm thử và đảm bảo chất lượng phần mềm
 
