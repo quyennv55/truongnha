@@ -1,6 +1,6 @@
-Xây dựng test cho truongnha.com
+XÂY DỤNG TEST CASE CHO TRUONGNHA.COM
 =========
-UNIVERSITY OF ENGINEERING AND TECHNOLOGY
+UNIVERSITY OF ENGINEERING AND TECHNOLOGY - VNU,HN
 
 Bài tập lớn môn: Kiểm thử và đảm bảo chất lượng phần mềm
 
