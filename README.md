@@ -10,6 +10,7 @@ Thực hiện bởi Nhóm 3 - Các thành viên:
 + Nguyễn Thị Quý
 
 Mục đích: Xây dựng các ca kiểm thử cho website: truongnha.com 
+
 Phương pháp: Sử dụng robot framework + thư viện selenium
 
 Nội dung test:
