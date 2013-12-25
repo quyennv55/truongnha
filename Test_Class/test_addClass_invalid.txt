@@ -7,6 +7,7 @@ Resource	resource.txt
 	Điền tài khoản  quynt
 	Điền mật khẩu  kiemthu3
 	Kích chọn button đăng nhập
+	
 Thêm lớp học mới [Không có tên lớp]
 	Chọn chức năng lớp học
 	Kích chọn chức năng thêm lớp mới
@@ -15,7 +16,7 @@ Thêm lớp học mới [Không có tên lớp]
 	Chọn giáo viên chủ nhiệm  3434
 	Kích chọn button thêm
 	Location Should Be   http://${HOST}${ADDCLASS URL}
-	
+
 Thêm lớp học mới [Giáo viên chủ nhiệm đã chủ nhiệm lớp nào đó]
 	Chọn chức năng lớp học
 	Kích chọn chức năng thêm lớp mới
@@ -29,6 +30,15 @@ Thêm lớp học mới [Lớp đã tồn tại]
 	Chọn chức năng lớp học
 	Kích chọn chức năng thêm lớp mới
 	Điền tên lớp   10 A
+	Chọn phân ban   KHTN
+	Chọn giáo viên chủ nhiệm  3434
+	Kích chọn button thêm
+	Location Should Be   http://${HOST}${ADDCLASS URL}
+	
+Thêm lớp học mới [Lớp nhập không đúng định dạng]
+	Chọn chức năng lớp học
+	Kích chọn chức năng thêm lớp mới
+	Điền tên lớp   10A
 	Chọn phân ban   KHTN
 	Chọn giáo viên chủ nhiệm  3434
 	Kích chọn button thêm

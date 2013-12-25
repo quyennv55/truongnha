@@ -46,4 +46,11 @@ Chọn giáo viên chủ nhiệm  [Arguments]  ${giáo viên}
 Kích chọn button thêm
 	Click Button  submit
 	
+Xóa lớp học mã  [Arguments]  ${mã lớp}
+	Click Element  xpath=//span[@forclass='${mã lớp}']
+Click xóa lớp học
+	Click Button  xoa
+	
+Xóa lớp học
+	Click Element  xpath=(//span[@class="btn btn-small class-delete"])[last()]  dont_wait=1
 	
