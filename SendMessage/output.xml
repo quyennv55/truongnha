@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20131228 00:16:15.811" generator="Robot 2.8.1 (Python 2.7.5 on win32)">
+<suite source="D:\hahaha\ky I nam 4\kiem thu va dam bao chat luong phan mem\SendMessage\TestSendMessage.txt" id="s1" name="TestSendMessage">
+<test id="s1-t1" name="Login">
+<kw type="kw" name="resource.Open login page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20131228 00:16:15.989" level="INFO">Opening browser 'ff' to base url 'http://truongnha.com/login/'</msg>
+<status status="PASS" endtime="20131228 00:16:24.739" starttime="20131228 00:16:15.989"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20131228 00:16:24.808" starttime="20131228 00:16:24.740"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20131228 00:16:24.809" starttime="20131228 00:16:24.808"></status>
+</kw>
+<status status="PASS" endtime="20131228 00:16:24.809" starttime="20131228 00:16:15.988"></status>
+</kw>
+<kw type="kw" name="resource.Input Username">
+<doc></doc>
+<arguments>
+<arg>quynt</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id_username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20131228 00:16:24.811" level="INFO">Typing text 'quynt' into text field 'id_username'</msg>
+<status status="PASS" endtime="20131228 00:16:24.918" starttime="20131228 00:16:24.810"></status>
+</kw>
+<status status="PASS" endtime="20131228 00:16:24.918" starttime="20131228 00:16:24.809"></status>
+</kw>
+<kw type="kw" name="resource.Input Password">
+<doc></doc>
+<arguments>
+<arg>kiemthu3</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id_password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20131228 00:16:24.920" level="INFO">Typing text 'kiemthu3' into text field 'id_password'</msg>
+<status status="PASS" endtime="20131228 00:16:24.995" starttime="20131228 00:16:24.919"></status>
+</kw>
+<status status="PASS" endtime="20131228 00:16:24.996" starttime="20131228 00:16:24.918"></status>
+</kw>
+<kw type="kw" name="resource.Submit Login">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20131228 00:16:24.997" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" endtime="20131228 00:16:25.868" starttime="20131228 00:16:24.997"></status>
+</kw>
+<status status="PASS" endtime="20131228 00:16:25.869" starttime="20131228 00:16:24.996"></status>
+</kw>
+<kw type="kw" name="resource.Display WelcomPage">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20131228 00:16:25.888" level="INFO">Current location is 'http://truongnha.com/school/'.</msg>
+<status status="PASS" endtime="20131228 00:16:25.888" starttime="20131228 00:16:25.870"></status>
+</kw>
+<status status="PASS" endtime="20131228 00:16:25.889" starttime="20131228 00:16:25.869"></status>
+</kw>
+<kw type="kw" name="resource.Go to Welcome Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20131228 00:16:25.890" level="INFO">Opening url 'http://truongnha.com/school/'</msg>
+<status status="PASS" endtime="20131228 00:16:26.344" starttime="20131228 00:16:25.890"></status>
+</kw>
+<status status="PASS" endtime="20131228 00:16:26.345" starttime="20131228 00:16:25.889"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20131228 00:16:26.345" critical="yes" starttime="20131228 00:16:15.987"></status>
+</test>
+<test id="s1-t2" name="Display teachers Page">
+<kw type="kw" name="resource.Click Teacher Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>teachers</arg>
+</arguments>
+<msg timestamp="20131228 00:16:26.349" level="INFO">Clicking link 'teachers'.</msg>
+<status status="PASS" endtime="20131228 00:16:27.415" starttime="20131228 00:16:26.349"></status>
+</kw>
+<status status="PASS" endtime="20131228 00:16:27.415" starttime="20131228 00:16:26.348"></status>
+</kw>
+<kw type="kw" name="resource.Go to Teacher page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${TEACHER URL}</arg>
+</arguments>
+<msg timestamp="20131228 00:16:27.417" level="INFO">Opening url 'http://truongnha.com/school/teachers'</msg>
+<status status="PASS" endtime="20131228 00:16:27.967" starttime="20131228 00:16:27.416"></status>
+</kw>
+<status status="PASS" endtime="20131228 00:16:27.967" starttime="20131228 00:16:27.416"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20131228 00:16:27.968" critical="yes" starttime="20131228 00:16:26.347"></status>
+</test>
+<test id="s1-t3" name="Send message to teachers">
+<kw type="kw" name="resource.Choose Teacher1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>checkbox_3448</arg>
+</arguments>
+<msg timestamp="20131228 00:16:27.976" level="INFO">Selecting checkbox 'checkbox_3448'.</msg>
+<status status="PASS" endtime="20131228 00:16:28.074" starttime="20131228 00:16:27.973"></status>
+</kw>
+<status status="PASS" endtime="20131228 00:16:28.074" starttime="20131228 00:16:27.973"></status>
+</kw>
+<kw type="kw" name="resource.Choose Teacher2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>checkbox_3434</arg>
+</arguments>
+<msg timestamp="20131228 00:16:28.076" level="INFO">Selecting checkbox 'checkbox_3434'.</msg>
+<status status="PASS" endtime="20131228 00:16:28.160" starttime="20131228 00:16:28.076"></status>
+</kw>
+<status status="PASS" endtime="20131228 00:16:28.160" starttime="20131228 00:16:28.075"></status>
+</kw>
+<kw type="kw" name="resource.Click Message Fuction">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>textSms</arg>
+</arguments>
+<msg timestamp="20131228 00:16:28.161" level="INFO">Clicking button 'textSms'.</msg>
+<status status="PASS" endtime="20131228 00:16:28.257" starttime="20131228 00:16:28.161"></status>
+</kw>
+<status status="PASS" endtime="20131228 00:16:28.257" starttime="20131228 00:16:28.160"></status>
+</kw>
+<kw type="kw" name="resource.Input Content Message">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>smsContent</arg>
+<arg>tất cả đồng bào chú ý!</arg>
+</arguments>
+<msg timestamp="20131228 00:16:28.259" level="INFO">Typing text 'tất cả đồng bào chú ý!' into text field 'smsContent'</msg>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20131228 00:16:28.441" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20131228 00:16:28.441" starttime="20131228 00:16:28.287"></status>
+</kw>
+<msg timestamp="20131228 00:16:28.443" level="FAIL">ElementNotVisibleException: Message: u'Element is not currently visible and so may not be interacted with' ; Stacktrace: 
+    at fxdriver.preconditions.visible (file:///c:/users/tiensi~1/appdata/local/temp/tmprzz8vb/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command_processor.js:8210)
+    at DelayedCommand.prototype.checkPreconditions_ (file:///c:/users/tiensi~1/appdata/local/temp/tmprzz8vb/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command_processor.js:10834)
+    at DelayedCommand.prototype.executeInternal_/h (file:///c:/users/tiensi~1/appdata/local/temp/tmprzz8vb/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command_processor.js:10851)
+    at DelayedCommand.prototype.executeInternal_ (file:///c:/users/tiensi~1/appdata/local/temp/tmprzz8vb/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command_processor.js:10856)
+    at DelayedCommand.prototype.execute/&lt; (file:///c:/users/tiensi~1/appdata/local/temp/tmprzz8vb/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command_processor.js:10798) </msg>
+<status status="FAIL" endtime="20131228 00:16:28.443" starttime="20131228 00:16:28.258"></status>
+</kw>
+<status status="FAIL" endtime="20131228 00:16:28.444" starttime="20131228 00:16:28.258"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20131228 00:16:28.445" critical="yes" starttime="20131228 00:16:27.971">ElementNotVisibleException: Message: u'Element is not currently visible and so may not be interacted with' ; Stacktrace: 
+    at fxdriver.preconditions.visible (file:///c:/users/tiensi~1/appdata/local/temp/tmprzz8vb/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command_processor.js:8210)
+    at DelayedCommand.prototype.checkPreconditions_ (file:///c:/users/tiensi~1/appdata/local/temp/tmprzz8vb/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command_processor.js:10834)
+    at DelayedCommand.prototype.executeInternal_/h (file:///c:/users/tiensi~1/appdata/local/temp/tmprzz8vb/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command_processor.js:10851)
+    at DelayedCommand.prototype.executeInternal_ (file:///c:/users/tiensi~1/appdata/local/temp/tmprzz8vb/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command_processor.js:10856)
+    at DelayedCommand.prototype.execute/&lt; (file:///c:/users/tiensi~1/appdata/local/temp/tmprzz8vb/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command_processor.js:10798) </status>
+</test>
+<doc>A test suite with a single test for valid login. This test has a workflow that is created using keywords from the resource file.</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20131228 00:16:28.450" starttime="20131228 00:16:15.811"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="2">Critical Tests</stat>
+<stat fail="1" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="2" id="s1" name="TestSendMessage">TestSendMessage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

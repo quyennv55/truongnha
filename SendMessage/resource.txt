@@ -1,0 +1,64 @@
+﻿*** Settings ***
+
+Documentation  A resource file containing the demo app specific keywords and variables that create our own domain specific language. Also SeleniumLibrary itself is imported here so that tests only need to import this resource file.
+
+Library        Selenium2Library
+
+
+*** Variables ***
+
+${BROWSER}       ff
+${DELAY}         0
+${HOST}          truongnha.com
+${LOGIN URL}     http://${HOST}/login/
+${WELCOME URL}   http://${HOST}/school/
+${TEACHER URL}   http://${HOST}/school/teachers
+
+*** Keywords ***	
+
+Open login page
+    Open Browser  ${LOGIN URL}  ${BROWSER}
+	Maximize Browser Window
+    Set Selenium Speed  ${DELAY}    
+
+Go To Login Page
+    Go To  ${LOGIN URL}    
+	
+Input Username  [Arguments]  ${username}
+    Input Text  id_username  ${username}
+
+Input Password  [Arguments]	 ${password}
+    Input Text  id_password  ${password}
+
+Submit Login
+    Click Button  login
+
+Display WelcomPage
+    Location Should Be  ${WELCOME URL}
+	
+Go to Welcome Page
+    Go To  ${WELCOME URL}    
+
+Click Teacher Page
+	Click Link  teachers
+	
+Go to Teacher page
+	Go To  ${TEACHER URL}
+	
+Choose Teacher1
+	Select Checkbox	checkbox_3448
+ 
+Choose Teacher2
+	Select Checkbox	checkbox_3434
+	
+Click Message Fuction
+	Click Button	textSms
+  
+Input Content Message
+	Input Text	smsContent	tất cả đồng bào chú ý!	
+	
+Send Message
+	Click Button send
+	
+Display the Teachers Page
+    Location Should Be  ${TEACHER URL}  
