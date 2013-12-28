@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20131228 17:40:23.984" generator="Robot 2.8.1 (Python 2.7.5 on win32)">
+<suite source="C:\Documents and Settings\Admin\Desktop\Truongnha\TEACHERS\editInfoTeacherBlankRequire\TestEditTeacher.txt" id="s1" name="TestEditTeacher">
+<test id="s1-t1" name="Login">
+<kw type="kw" name="resource.Open login page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:24.156" level="INFO">Opening browser 'ff' to base url 'http://truongnha.com/login/'</msg>
+<status status="PASS" endtime="20131228 17:40:33.187" starttime="20131228 17:40:24.156"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20131228 17:40:33.187" starttime="20131228 17:40:33.187"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:33.187" starttime="20131228 17:40:24.156"></status>
+</kw>
+<kw type="kw" name="resource.Input Username">
+<doc></doc>
+<arguments>
+<arg>quynt</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id_username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:33.187" level="INFO">Typing text 'quynt' into text field 'id_username'</msg>
+<status status="PASS" endtime="20131228 17:40:34.812" starttime="20131228 17:40:33.187"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:34.812" starttime="20131228 17:40:33.187"></status>
+</kw>
+<kw type="kw" name="resource.Input Password">
+<doc></doc>
+<arguments>
+<arg>kiemthu3</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id_password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:34.812" level="INFO">Typing text 'kiemthu3' into text field 'id_password'</msg>
+<status status="PASS" endtime="20131228 17:40:36.375" starttime="20131228 17:40:34.812"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:36.375" starttime="20131228 17:40:34.812"></status>
+</kw>
+<kw type="kw" name="resource.Submit Login">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20131228 17:40:36.375" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" endtime="20131228 17:40:40.359" starttime="20131228 17:40:36.375"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:40.359" starttime="20131228 17:40:36.375"></status>
+</kw>
+<kw type="kw" name="resource.Display WelcomPage">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Location Should Be">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:40.859" level="INFO">Current location is 'http://truongnha.com/school/'.</msg>
+<status status="PASS" endtime="20131228 17:40:40.859" starttime="20131228 17:40:40.359"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:40.859" starttime="20131228 17:40:40.359"></status>
+</kw>
+<kw type="kw" name="resource.Go to Welcome Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:40.859" level="INFO">Opening url 'http://truongnha.com/school/'</msg>
+<status status="PASS" endtime="20131228 17:40:42.531" starttime="20131228 17:40:40.859"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:42.531" starttime="20131228 17:40:40.859"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20131228 17:40:42.531" critical="yes" starttime="20131228 17:40:24.156"></status>
+</test>
+<test id="s1-t2" name="Display teachers Page">
+<kw type="kw" name="resource.Click Teacher Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>teachers</arg>
+</arguments>
+<msg timestamp="20131228 17:40:42.531" level="INFO">Clicking link 'teachers'.</msg>
+<status status="PASS" endtime="20131228 17:40:47.453" starttime="20131228 17:40:42.531"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:47.453" starttime="20131228 17:40:42.531"></status>
+</kw>
+<kw type="kw" name="resource.Go to Teacher page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${TEACHER URL}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:47.453" level="INFO">Opening url 'http://truongnha.com/school/teachers'</msg>
+<status status="PASS" endtime="20131228 17:40:49.156" starttime="20131228 17:40:47.453"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:49.156" starttime="20131228 17:40:47.453"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20131228 17:40:49.156" critical="yes" starttime="20131228 17:40:42.531"></status>
+</test>
+<test id="s1-t3" name="View Detail Information A Teacher">
+<kw type="kw" name="resource.Choose A Teacher From List">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>http://truongnha.com/school/viewTeacherDetail/3448</arg>
+</arguments>
+<msg timestamp="20131228 17:40:49.156" level="INFO">Opening url 'http://truongnha.com/school/viewTeacherDetail/3448'</msg>
+<status status="PASS" endtime="20131228 17:40:51.171" starttime="20131228 17:40:49.156"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:51.171" starttime="20131228 17:40:49.156"></status>
+</kw>
+<kw type="kw" name="resource.Edit First Name">
+<doc></doc>
+<arguments>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>first_name</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:51.171" level="INFO">Typing text '' into text field 'first_name'</msg>
+<status status="PASS" endtime="20131228 17:40:52.734" starttime="20131228 17:40:51.171"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:52.734" starttime="20131228 17:40:51.171"></status>
+</kw>
+<kw type="kw" name="resource.Edit Last Name">
+<doc></doc>
+<arguments>
+<arg>kate teddy</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>last_name</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:52.734" level="INFO">Typing text 'kate teddy' into text field 'last_name'</msg>
+<status status="PASS" endtime="20131228 17:40:54.296" starttime="20131228 17:40:52.734"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:54.296" starttime="20131228 17:40:52.734"></status>
+</kw>
+<kw type="kw" name="resource.Edit Birth Place">
+<doc></doc>
+<arguments>
+<arg>Hải Dương</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>birth_place</arg>
+<arg>${birth_place}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:54.296" level="INFO">Typing text 'Hải Dương' into text field 'birth_place'</msg>
+<status status="PASS" endtime="20131228 17:40:55.859" starttime="20131228 17:40:54.296"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:55.859" starttime="20131228 17:40:54.296"></status>
+</kw>
+<kw type="kw" name="resource.Edit Religion">
+<doc></doc>
+<arguments>
+<arg>Không</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>ton_giao</arg>
+<arg>${ton_giao}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:55.859" level="INFO">Typing text 'Không' into text field 'ton_giao'</msg>
+<status status="PASS" endtime="20131228 17:40:57.437" starttime="20131228 17:40:55.859"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:57.437" starttime="20131228 17:40:55.859"></status>
+</kw>
+<kw type="kw" name="resource.Edit Home Town">
+<doc></doc>
+<arguments>
+<arg>Hải Dương</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>home_town</arg>
+<arg>${home_town}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:57.437" level="INFO">Typing text 'Hải Dương' into text field 'home_town'</msg>
+<status status="PASS" endtime="20131228 17:40:59.000" starttime="20131228 17:40:57.437"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:40:59.000" starttime="20131228 17:40:57.437"></status>
+</kw>
+<kw type="kw" name="resource.Edit Current Address">
+<doc></doc>
+<arguments>
+<arg>Thanh Hà, Hải Dương</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>current_address</arg>
+<arg>${current_address}</arg>
+</arguments>
+<msg timestamp="20131228 17:40:59.000" level="INFO">Typing text 'Thanh Hà, Hải Dương' into text field 'current_address'</msg>
+<status status="PASS" endtime="20131228 17:41:00.578" starttime="20131228 17:40:59.000"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:00.578" starttime="20131228 17:40:59.000"></status>
+</kw>
+<kw type="kw" name="resource.Edit Phone">
+<doc></doc>
+<arguments>
+<arg>01234567894</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>phone</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20131228 17:41:00.578" level="INFO">Typing text '01234567894' into text field 'phone'</msg>
+<status status="PASS" endtime="20131228 17:41:02.140" starttime="20131228 17:41:00.578"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:02.140" starttime="20131228 17:41:00.578"></status>
+</kw>
+<kw type="kw" name="resource.Edit Email">
+<doc></doc>
+<arguments>
+<arg>thanghv2011@gmail.com</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20131228 17:41:02.140" level="INFO">Typing text 'thanghv2011@gmail.com' into text field 'email'</msg>
+<status status="PASS" endtime="20131228 17:41:03.734" starttime="20131228 17:41:02.140"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:03.734" starttime="20131228 17:41:02.140"></status>
+</kw>
+<kw type="kw" name="resource.Edit Indentificaton">
+<doc></doc>
+<arguments>
+<arg>1921345681</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>cmt</arg>
+<arg>${cmt}</arg>
+</arguments>
+<msg timestamp="20131228 17:41:03.734" level="INFO">Typing text '1921345681' into text field 'cmt'</msg>
+<status status="PASS" endtime="20131228 17:41:05.296" starttime="20131228 17:41:03.734"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:05.296" starttime="20131228 17:41:03.734"></status>
+</kw>
+<kw type="kw" name="resource.Edit Start Date">
+<doc></doc>
+<arguments>
+<arg>1/1/2010</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>ngay_cap</arg>
+<arg>${ngay_cap}</arg>
+</arguments>
+<msg timestamp="20131228 17:41:05.312" level="INFO">Typing text '1/1/2010' into text field 'ngay_cap'</msg>
+<status status="PASS" endtime="20131228 17:41:06.875" starttime="20131228 17:41:05.312"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:06.875" starttime="20131228 17:41:05.296"></status>
+</kw>
+<kw type="kw" name="resource.Edit Take Place">
+<doc></doc>
+<arguments>
+<arg>CA Hải Dương</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>noi_cap</arg>
+<arg>${noi_cap}</arg>
+</arguments>
+<msg timestamp="20131228 17:41:06.875" level="INFO">Typing text 'CA Hải Dương' into text field 'noi_cap'</msg>
+<status status="PASS" endtime="20131228 17:41:08.453" starttime="20131228 17:41:06.875"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:08.453" starttime="20131228 17:41:06.875"></status>
+</kw>
+<kw type="kw" name="resource.Edit Day In Union">
+<doc></doc>
+<arguments>
+<arg>1/1/1999</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>ngay_vao_doan</arg>
+<arg>${ngay_vao_doan}</arg>
+</arguments>
+<msg timestamp="20131228 17:41:08.453" level="INFO">Typing text '1/1/1999' into text field 'ngay_vao_doan'</msg>
+<status status="PASS" endtime="20131228 17:41:10.062" starttime="20131228 17:41:08.453"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:10.062" starttime="20131228 17:41:08.453"></status>
+</kw>
+<kw type="kw" name="resource.Edit Day In Party">
+<doc></doc>
+<arguments>
+<arg>1/1/2012</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>ngay_vao_dang</arg>
+<arg>${ngay_vao_dang}</arg>
+</arguments>
+<msg timestamp="20131228 17:41:10.062" level="INFO">Typing text '1/1/2012' into text field 'ngay_vao_dang'</msg>
+<status status="PASS" endtime="20131228 17:41:11.656" starttime="20131228 17:41:10.062"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:11.656" starttime="20131228 17:41:10.062"></status>
+</kw>
+<kw type="kw" name="resource.Edit Salary">
+<doc></doc>
+<arguments>
+<arg>10000000</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>muc_luong</arg>
+<arg>${muc_luong}</arg>
+</arguments>
+<msg timestamp="20131228 17:41:11.656" level="INFO">Typing text '10000000' into text field 'muc_luong'</msg>
+<status status="PASS" endtime="20131228 17:41:13.203" starttime="20131228 17:41:11.656"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:13.203" starttime="20131228 17:41:11.656"></status>
+</kw>
+<kw type="kw" name="resource.Edit Rank Of Salary">
+<doc></doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>hs_luong</arg>
+<arg>${hs_luong}</arg>
+</arguments>
+<msg timestamp="20131228 17:41:13.218" level="INFO">Typing text '2' into text field 'hs_luong'</msg>
+<status status="PASS" endtime="20131228 17:41:14.765" starttime="20131228 17:41:13.218"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:14.765" starttime="20131228 17:41:13.203"></status>
+</kw>
+<kw type="kw" name="resource.Edit Insurance">
+<doc></doc>
+<arguments>
+<arg>123000</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>bhxh</arg>
+<arg>${bhxh}</arg>
+</arguments>
+<msg timestamp="20131228 17:41:14.765" level="INFO">Typing text '123000' into text field 'bhxh'</msg>
+<status status="PASS" endtime="20131228 17:41:16.312" starttime="20131228 17:41:14.765"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:16.312" starttime="20131228 17:41:14.765"></status>
+</kw>
+<kw type="kw" name="resource.Save Change">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@class='btn btn-primary']</arg>
+</arguments>
+<msg timestamp="20131228 17:41:16.312" level="INFO">Clicking button 'xpath=//input[@class='btn btn-primary']'.</msg>
+<status status="PASS" endtime="20131228 17:41:17.906" starttime="20131228 17:41:16.312"></status>
+</kw>
+<status status="PASS" endtime="20131228 17:41:17.906" starttime="20131228 17:41:16.312"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Element Should Contain">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>notify</arg>
+<arg>Có lỗi ở dữ liệu nhập vào</arg>
+</arguments>
+<msg timestamp="20131228 17:41:17.906" level="INFO">Verifying element 'notify' contains text 'Có lỗi ở dữ liệu nhập vào'.</msg>
+<status status="PASS" endtime="20131228 17:41:18.921" starttime="20131228 17:41:17.906"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20131228 17:41:18.921" critical="yes" starttime="20131228 17:40:49.156"></status>
+</test>
+<doc>A test suite with a single test for valid login. This test has a workflow that is created using keywords from the resource file.</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20131228 17:41:18.921" starttime="20131228 17:40:23.984"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="3" id="s1" name="TestEditTeacher">TestEditTeacher</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,79 @@
+﻿*** Settings ***
+
+Documentation  A resource file containing the demo app specific keywords and variables that create our own domain specific language. Also SeleniumLibrary itself is imported here so that tests only need to import this resource file.
+
+Library        Selenium2Library
+
+
+*** Variables ***
+
+${BROWSER}       ff
+${DELAY}         1
+${HOST}          truongnha.com
+${LOGIN URL}     http://${HOST}/login/
+${WELCOME URL}   http://${HOST}/school/
+${TEACHER URL}   http://${HOST}/school/teachers
+${TEACHER NAME}  
+
+*** Keywords ***	
+
+Open login page
+    Open Browser  ${LOGIN URL}  ${BROWSER}
+    Set Selenium Speed  ${DELAY}    
+
+Go To Login Page
+    Go To  ${LOGIN URL}    
+	
+Input Username  [Arguments]  ${username}
+    Input Text  id_username  ${username}
+
+Input Password  [Arguments]	 ${password}
+    Input Text  id_password  ${password}
+
+Submit Login
+    Click Button  login
+
+Display WelcomPage
+    Location Should Be  ${WELCOME URL}
+	
+Go to Welcome Page
+    Go To  ${WELCOME URL}    
+
+Click Teacher Page
+	Click Link  teachers
+	
+Go to Teacher page
+	Go To  ${TEACHER URL}
+
+Click Teacher List
+	Click Link  teacher-list-menu
+
+Click Insert Teacher
+	Click Link  add-teacher
+	
+Input FullName  [Arguments]  ${fullname}
+	Input Text  first_name  ${fullname}	
+
+Input Birthday  [Arguments]  ${birthday}
+	Input Text  birthday  ${birthday}	
+
+Input Phone  [Arguments]  ${sms_phone}
+	Input Text  sms_phone  ${sms_phone}	
+
+Choose Sex  [Arguments]  ${sex}
+	Select From List  id_sex  ${sex}
+
+Choose Major  [Arguments]  ${major}
+	Select From List  id_major  ${major}
+
+Choose Team  [Arguments]  ${team}
+	Select From List	id_team_id	${team}
+	
+Choose Group  [Arguments]  ${group}
+	Select From List  id_group_id	${group}
+
+Click submit
+	Click Button  submitaddTeacher
+
+Display the Add Teachers Page
+    Element Should Contain    add-teacher-div    Trường này là bắt buộc.

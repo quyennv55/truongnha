@@ -1,0 +1,37 @@
+﻿*** Settings ***
+Documentation  A test suite with a single test for valid login. This test has a workflow that is created using keywords from the resource file.
+
+Resource       resource.txt
+
+
+*** Test Cases ***
+Login
+	Open login page
+	Input Username	quynt
+	Input Password	kiemthu3
+	Submit Login
+    Display WelcomPage
+	Go to Welcome Page
+Display teachers Page
+	Click Teacher Page
+	Go to Teacher page
+View Detail Information A Teacher
+	Choose A Teacher From List
+	Edit Last Name	kate teddy
+	Edit Birth Place	Hải Dương
+	Edit Religion	Không
+	Edit Home Town	Hải Dương
+	Edit Current Address	Thanh Hà, Hải Dương
+	Edit Phone	01234567894
+	Edit Email	thanghv2011@gmail.com
+	Edit Indentificaton	1921345681
+	Edit Start Date	1/1/2010
+	Edit Take Place	CA Hải Dương
+	Edit Day In Union	1/1/1999
+	Edit Day In Party	1/1/2012
+	Edit Salary	10000000
+	Edit Rank Of Salary	2
+	Edit Insurance	123000
+	Save Change
+	Go To Teachers Page
+	Element Should Contain    teacher-pills    kate teddy

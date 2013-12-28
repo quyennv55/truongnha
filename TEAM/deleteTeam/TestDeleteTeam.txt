@@ -1,0 +1,22 @@
+*** Settings ***
+Documentation  A test suite with a single test for valid login. This test has a workflow that is created using keywords from the resource file.
+
+Resource       resource.txt
+
+
+*** Test Cases ***
+Login
+	Open login page
+	Input Username	quynt
+	Input Password	kiemthu3
+	Submit Login
+    Display WelcomPage
+	Go to Welcome Page
+Display teachers Page
+	Click Teacher Page
+	Go to Teacher page
+Delete a group
+	Click Delete Group
+	Click Confirm
+	Check
+	Display the Teachers Page

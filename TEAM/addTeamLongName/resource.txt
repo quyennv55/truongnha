@@ -1,0 +1,53 @@
+*** Settings ***
+Documentation     A resource file containing the demo app specific keywords and variables that create our own domain specific language. Also SeleniumLibrary itself is imported here so that tests only need to import this resource file.
+Library           Selenium2Library
+
+*** Variables ***
+${BROWSER}        ff
+${DELAY}          0.5
+${HOST}           truongnha.com
+${LOGIN URL}      http://${HOST}/login/
+${WELCOME URL}    http://${HOST}/school/
+${TEACHER URL}    http://${HOST}/school/teachers
+${TEAM NAME}      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+*** Keywords ***
+Open login page
+    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Set Selenium Speed    ${DELAY}
+
+Go To Login Page
+    Go To    ${LOGIN URL}
+
+Input Username
+    [Arguments]    ${username}
+    Input Text    id_username    ${username}
+
+Input Password
+    [Arguments]    ${password}
+    Input Text    id_password    ${password}
+
+Submit Login
+    Click Button    login
+
+Display WelcomPage
+    Location Should Be    ${WELCOME URL}
+
+Go to Welcome Page
+    Go To    ${WELCOME URL}
+
+Click Teacher Page
+    Click Link    teachers
+
+Go to Teacher page
+    Go To    ${TEACHER URL}
+
+Click Add Group
+    Click Link    xpath=//a[@class='add-team']
+    Input Text    rename-team-input    ${TEAM NAME}
+
+Click submit
+    Click Button    rename-team-submit
+
+Display the Teachers Page
+    Element Should Contain    notify    Tên quá dài
