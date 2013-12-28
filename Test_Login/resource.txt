@@ -1,0 +1,30 @@
+﻿*** Settings ***
+Library			 Selenium2Library
+
+*** Variables ***
+
+${BROWSER}       ff
+${HOST}          truongnha.com
+${DELAY} 		 1
+${LOGIN URL}     http://${HOST}/login/
+${WELCOME URL}   http://${HOST}/school/
+${CLASS URL}     /school/classes
+${ADDCLASS URL}	 /school/addclass
+
+
+*** Keywords ***
+Đăng nhập vào hệ thống
+	Open Browser  ${LOGIN URL}  ${BROWSER}
+	Set Selenium Timeout  10
+	Maximize Browser Window
+	Set Selenium Speed  ${DELAY} 
+	
+Điền tài khoản  [Arguments]  ${username}
+	Input Text  id_username  ${username}
+	
+Điền mật khẩu  [Arguments]  ${password}
+	Input Text  id_password  ${password}
+	
+Kích chọn button đăng nhập	
+	Click Button  login	
+	

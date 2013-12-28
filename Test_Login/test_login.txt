@@ -1,0 +1,35 @@
+﻿*** Settings ***
+Resource	resource.txt
+
+*** Test Cases ***
+
+Đăng nhập [ Empty Username]
+	Đăng nhập vào hệ thống
+	Điền tài khoản  ${EMPTY}
+	Điền mật khẩu  kiemthu3
+	Kích chọn button đăng nhập
+	Location Should Be   ${LOGIN URL}
+	
+Đăng nhập [ Empty passworđ]
+	Điền tài khoản  quynt
+	Điền mật khẩu  ${EMPTY}
+	Kích chọn button đăng nhập
+	Location Should Be   ${LOGIN URL}
+	
+Đăng nhập [ invalid username or password]
+	Điền tài khoản  quynt
+	Điền mật khẩu  kiemthu4
+	Kích chọn button đăng nhập
+	Location Should Be   ${LOGIN URL}
+	
+Đăng nhập [invalid username with special characters]
+	Điền tài khoản  !@#$%^
+	Điền mật khẩu  kiemthu3
+	Kích chọn button đăng nhập
+	Location Should Be   ${LOGIN URL}
+	
+Đăng nhập [Valid]
+	Điền tài khoản  quynt
+	Điền mật khẩu  kiemthu3
+	Kích chọn button đăng nhập
+	Location Should Be   ${WELCOME URL}
