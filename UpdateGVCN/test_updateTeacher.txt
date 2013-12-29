@@ -1,0 +1,14 @@
+﻿*** Settings ***
+Resource	resource.txt
+
+*** Test Cases ***
+Login
+	Đăng nhập vào hệ thống
+	Điền tài khoản  quynt
+	Điền mật khẩu  kiemthu3
+	Kích chọn button đăng nhập
+	
+Thêm giáo viên [Thêm Hoàng Văn Thắng làm chủ nhiệm lớp 11 A]
+	Chọn chức năng lớp học
+	Update teacher	Hoàng Văn Thắng
+	Location Should Be	http://${HOST}${CLASS URL}
